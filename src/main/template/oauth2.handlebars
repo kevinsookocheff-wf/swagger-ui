@@ -12,16 +12,14 @@
         </fieldset>
     {{/if}}
     {{#if clientAuthentication}}
-        <p>Setup client authentication.{{#if requireClientAuthenticaiton}}(Required){{/if}}</p>
+        <p>Setup client authentication.{{#if requireClientAuthentication}}(Required){{/if}}</p>
         <fieldset>
-            <div><label>Type:
-                <select class="oauth-client-authentication-type" name="client-authentication-type">
-                    <option value="none" selected>None or other</option>
-                    <option value="basic">Basic auth</option>
-                    <option value="request-body">Request body</option>
-                </select>
-            </label></div>
-            <div class="oauth-client-authentication" hidden>
+            <select class="oauth-client-authentication-type" name="client-authentication-type" hidden>
+                <option value="none">None or other</option>
+                <option value="basic">Basic auth</option>
+                <option value="request-body selected">Request body</option>
+            </select>
+            <div class="oauth-client-authentication">
                 <div><label>ClientId: <input class="oauth-client-id" type="text" name="client-id"></label></div>
                 <div><label>Secret: <input class="oauth-client-secret" type="text" name="client-secret"></label></div>
             </div>

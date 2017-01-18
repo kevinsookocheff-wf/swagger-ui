@@ -4,7 +4,7 @@ SwaggerUi.Models.Oauth2Model = Backbone.Model.extend({
     defaults: {
         scopes: {},
         isPasswordFlow: false,
-        clientAuthenticationType: 'none'
+        clientAuthenticationType: 'request-body'
     },
 
     initialize: function () {
