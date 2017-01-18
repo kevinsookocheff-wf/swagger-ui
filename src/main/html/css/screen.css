@@ -286,12 +286,6 @@
 .swagger-section .swagger-ui-wrap h6 span.divider {
   color: #aaaaaa;
 }
-.swagger-section .swagger-ui-wrap a {
-  color: #547f00;
-}
-.swagger-section .swagger-ui-wrap a img {
-  border: none;
-}
 .swagger-section .swagger-ui-wrap article,
 .swagger-section .swagger-ui-wrap aside,
 .swagger-section .swagger-ui-wrap details,
@@ -1425,6 +1419,7 @@
   padding: 9px 14px 19px 14px;
   height: 23px;
   min-width: 775px;
+  box-sizing: content-box;
 }
 .swagger-section #input_baseUrl {
   width: 400px;

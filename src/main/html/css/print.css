@@ -286,12 +286,6 @@
 .swagger-section .swagger-ui-wrap h6 span.divider {
   color: #aaaaaa;
 }
-.swagger-section .swagger-ui-wrap a {
-  color: #547f00;
-}
-.swagger-section .swagger-ui-wrap a img {
-  border: none;
-}
 .swagger-section .swagger-ui-wrap article,
 .swagger-section .swagger-ui-wrap aside,
 .swagger-section .swagger-ui-wrap details,
