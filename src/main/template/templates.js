@@ -119,7 +119,7 @@ templates['main'] = template({"1":function(container,depth0,helpers,partials,dat
 
   return "  <div class=\"info_title\">"
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.title : stack1),{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
-    + "</div>\n  <div id='auth_container'></div>\n  <button type=\"button\" class=\"btn btn-block btn-primary\">Authorize</button>\n</div>\n  <div class=\"info_description markdown\">"
+    + "</div>\n  <div class=\"info_description markdown\">"
     + ((stack1 = (helpers.sanitize || (depth0 && depth0.sanitize) || alias2).call(alias1,((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.description : stack1),{"name":"sanitize","hash":{},"data":data})) != null ? stack1 : "")
     + "</div>\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.externalDocs : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -230,7 +230,7 @@ templates['oauth2'] = template({"1":function(container,depth0,helpers,partials,d
 
   return "        <p>Setup client authentication."
     + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.requireClientAuthentication : depth0),{"name":"if","hash":{},"fn":container.program(8, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "</p>\n        <fieldset>\n            <select class=\"oauth-client-authentication-type\" name=\"client-authentication-type\" hidden>\n                <option value=\"none\">None or other</option>\n                <option value=\"basic\">Basic auth</option>\n                <option value=\"request-body selected\">Request body</option>\n            </select>\n            <div class=\"oauth-client-authentication\">\n                <div><label>ClientId: <input class=\"oauth-client-id\" type=\"text\" name=\"client-id\"></label></div>\n                <div><label>Secret: <input class=\"oauth-client-secret\" type=\"text\" name=\"client-secret\"></label></div>\n            </div>\n        </fieldset>\n";
+    + "</p>\n        <fieldset>\n            <select class=\"oauth-client-authentication-type\" name=\"client-authentication-type\" hidden>\n                <option value=\"none\">None or other</option>\n                <option value=\"basic\">Basic auth</option>\n                <option value=\"request-body selected\">Request body</option>\n            </select>\n            <div class=\"oauth-client-authentication\">\n                <div><label>Client Id: <input class=\"oauth-client-id\" type=\"text\" name=\"client-id\"></label></div>\n                <div><label>Client Secret: <input class=\"oauth-client-secret\" type=\"text\" name=\"client-secret\"></label></div>\n            </div>\n        </fieldset>\n";
 },"8":function(container,depth0,helpers,partials,data) {
     return "(Required)";
 },"10":function(container,depth0,helpers,partials,data) {
@@ -267,9 +267,7 @@ templates['oauth2'] = template({"1":function(container,depth0,helpers,partials,d
     + "</p>\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.isPasswordFlow : depth0),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.clientAuthentication : depth0),{"name":"if","hash":{},"fn":container.program(7, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "    <p><strong> "
-    + ((stack1 = (helpers.escape || (depth0 && depth0.escape) || alias2).call(alias1,(depth0 != null ? depth0.appName : depth0),{"name":"escape","hash":{},"data":data})) != null ? stack1 : "")
-    + " </strong> API requires the following scopes. Select which ones you want to grant to Swagger UI.</p>\n    <p>Scopes are used to grant an application different levels of access to data on behalf of the end user. Each API may declare one or more scopes.\n        <a href=\"#\">Learn how to use</a>\n    </p>\n    <ul class=\"api-popup-scopes\">\n"
+    + "    <p>This API accepts the following scopes. Select which ones you want to grant.</p>\n    <ul class=\"api-popup-scopes\">\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.scopes : depth0),{"name":"each","hash":{},"fn":container.program(10, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\n</div>\n";
 },"useData":true});
